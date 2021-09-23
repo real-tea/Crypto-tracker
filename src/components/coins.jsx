@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Coins = () => {
+const Coins = (props) => {
     return (
         <div>
             
