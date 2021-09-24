@@ -2,20 +2,24 @@ import React from 'react'
 
 const Coin = (props) => {
     return (
-        <div className = 'list-group-item d-flex justify-content-between align-items-center'>
-            <div>
-                <div>
+        <div className = 'coin-container'>
+            <div className = 'coin-row'>
+                <div className = 'coin'>
                     <img src = { props.image } alt = "web3 crypto"/>
-                    <h1>{ props.name }</h1>
-                    <p>{ props.symbol }</p>
+                    <h3>{ props.name }</h3>
+                    <p className = 'coin-symbol'>{ props.symbol }</p>
 
-                    <div>
-                        <p>${ props.price }</p>
-                        <p>{ props.volume.toLocaleString() }</p>
+                    <div className = 'coin-data'>
+                        <p className = 'coin-price'>${ props.price }</p>
+                        <p className = 'coin-volume'>{ props.volume.toLocaleString() }</p>
 
-                        <p>{ props.priceChange.toFixed(3) }</p>
+                        {props.priceChange < 0 ? (
+            <p className='coin-percent red'>{props.priceChange.toFixed(2)}%</p>
+          ) : (
+            <p className='coin-percent green'>{props.priceChange.toFixed(2)}%</p>
+          )}
 
-                        <p>{ props.marketCap }</p>
+                        <p className = "coin-marketcap">{ props.marketCap }</p>
                     </div>
                 </div>
             </div>
