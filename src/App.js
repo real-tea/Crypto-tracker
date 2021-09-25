@@ -32,6 +32,8 @@ function App() {
   return (
     <div className="App">
       <div className = "coin-search">
+        <p>Made with ♥ By <a href = "https://github.com/real-tea">Akash Singh</a></p>
+        
         <h1 className = 'coin-text'>Search for a crypto currency</h1>
         <form>
           <input type = "text"

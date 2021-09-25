@@ -1,4 +1,5 @@
 import React from 'react'
+import './coins.css'
 
 const Coin = (props) => {
     return (
@@ -8,19 +9,19 @@ const Coin = (props) => {
                     <img src = { props.image } alt = "web3 crypto"/>
                     <h3>{ props.name }</h3>
                     <p className = 'coin-symbol'>{ props.symbol }</p>
-
+                </div>
                     <div className = 'coin-data'>
                         <p className = 'coin-price'>${ props.price }</p>
                         <p className = 'coin-volume'>{ props.volume.toLocaleString() }</p>
 
-                        {props.priceChange < 0 ? (
-            <p className='coin-percent red'>{props.priceChange.toFixed(2)}%</p>
-          ) : (
-            <p className='coin-percent green'>{props.priceChange.toFixed(2)}%</p>
-          )}
+                                        {props.priceChange < 0 ? (
+                            <p className='coin-percent red'>{props.priceChange.toFixed(2)}%</p>
+                        ) : (
+                            <p className='coin-percent green'>{props.priceChange.toFixed(2)}%</p>
+                        )}
 
                         <p className = "coin-marketcap">{ props.marketCap }</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
